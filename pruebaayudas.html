@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function restock(itemCount, target) {
+  // Write your code here
+  let total = 0;
+  let sumaitems = 0;
+
+  for (let x = 0; x < itemCount.length; x++) {
+    sumaitems = sumaitems + itemCount[x];
+  }
+  total = parseInt(target - sumaitems);
+  console.log(total);
+}
+
+function main() {
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+  const itemCountCount = parseInt(readLine().trim(), 10);
+
+  let itemCount = [];
+
+  for (let i = 0; i < itemCountCount; i++) {
+    const itemCountItem = parseInt(readLine().trim(), 10);
+    itemCount.push(itemCountItem);
+  }
+
+  const target = parseInt(readLine().trim(), 10);
+
+  const result = restock(itemCount, target);
+
+  ws.write(result + "\n");
+
+  ws.end();
+}
+    </script>
+  </body>
+</html>

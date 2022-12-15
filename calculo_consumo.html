@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumo</title>
+  </head>
+  <body>
+    <h3>¿Alcohol o gasolina?</h3>
+    <script>
+      var tanque = 40;
+      var recorrido = 480;
+      var recorridoAlcohol = 300;
+      var salto = "<br>";
+      function saltarLinea() {
+        document.write("<br>");
+      }
+      function imprimir(texto) {
+        document.write(texto);
+        saltarLinea();
+      }
+      document.write("Eficiencia usando gasolina: " + tanque / recorrido);
+      document.write(salto);
+      saltarLinea();
+
+      document.write("Eficiencia usando alcohol: " + tanque / recorridoAlcohol);
+      saltarLinea();
+      imprimir("texto de una funcion");
+
+      /**
+             var tanque = 40;
+
+      var caminoConGasolina = 480;
+      **var consumoDeGasolina = caminoConGasolina/tanque;
+
+      var caminoConAlcohol = 300;
+      **var consumoDeAlcohol = caminoConAlcohol/tanque;
+
+      document.write("La eficiencia del carro usando gasolina es " + consumoDeGasolina + " km/L");
+      document.write("<br>");
+      document.write("La eficiencia del carro usando alcohol es " + consumoDeAlcohol + " km/L");
+      */
+    </script>
+  </body>
+</html>

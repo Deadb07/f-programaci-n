@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebFutbol</title>
+  </head>
+  <body>
+    <h1>Programa</h1>
+    <h3>Calcular puntos de un equipo futbol</h3>
+    <p>
+      <script>
+        function print(frase) {
+          document.writeln(frase);
+        }
+        /**
+         ** prompt el valor ingresado siempre es un string
+         * */
+        var victoria = parseInt(prompt("Informe la cantidad de victorias: "));
+        var empate = parseInt(prompt("Informe cantidad de empates: "));
+        total = victoria * 3 + empate;
+
+        print("El total de puntos del equipo es: " + total + "<br>");
+
+        if (total > 28) {
+          print("el equpo esta mejor que el año pasado");
+        }
+        if (total < 28) {
+          print("el equpo esta peor que el año pasado");
+        }
+        if (total == 28) {
+          print("el equpo esta igual que el año pasado");
+        }
+      </script>
+    </p>
+  </body>
+</html>
